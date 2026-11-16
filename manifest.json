@@ -1,11 +1,11 @@
 {
-  "name": "myfaveTT - download all your tiktok Audio",
-  "version": "1.2.70",
-  "description": "A tiktok downloader to backup your Liked and Followed audio tracks.",
+  "name": "myfaveTT - Local Audio Downloader",
+  "version": "9.9.9",
+  "description": "Backup TikTok liked and followed audios locally.",
   "manifest_version": 3,
-  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh+J8qZqWO+E/nH35XyQZYGM/Itofk1BZWXdCn62glKUhsStqJ19kGlIl6L1NDLRyVptAVDQ1FX/MaPSEhcmkv1m9POi9/2s63dFieCymsp7yb1YFHwhZlwntKxCRkslvB1Ctk8MEXn365VoR6Zg1sFm0ZrDeoPBFesjz4k3BjetF2vXxzOflyD+BN9LGPXmfnK/fyVjkxkZvImm5Q8muqvQhXh+6e9Hh2LskvKzrqMYf6Ye3jWcovEYWTyAc3Ylcbm/bmkJ/5DFz70eRQm88oR26QU6ynMtW8EzBr2YNpduOFHvZoKsjkKqYybvR579dSJ8zsXI0IttF+fTaKsyPowIDAQAB",
   "action": {
-    "default_title": "myfaveTT Audio"
+    "default_popup": "popup.html",
+    "default_title": "myfaveTT Local"
   },
   "background": {
     "service_worker": "b.js"
@@ -13,11 +13,10 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.tiktok.com/foryou*",
-        "https://www.tiktok.com/"
+        "https://www.tiktok.com/*"
       ],
       "js": [
-        "c.js"
+        "s.js"
       ],
       "css": [
         "style.css"
@@ -30,8 +29,7 @@
         "https://www.tiktok.com/*"
       ],
       "resources": [
-        "rl.html",
-        "s.js"
+        "popup.html"
       ]
     }
   ],
